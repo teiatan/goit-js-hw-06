@@ -14,7 +14,5 @@ const ingredientsListEl = ingredients.map(ingredient => {
   ingredientEl.classList.add(`item`);
 
   return ingredientEl;
-})
-
-console.log(ingredientsListEl);
+});
 ingredientsContainerEl.append(...ingredientsListEl);
