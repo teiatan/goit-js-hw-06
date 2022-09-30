@@ -14,8 +14,6 @@ const images = [
 ];
 
 const galleryContainerEl = document.querySelector(`.gallery`);
-const makeGalleryCard = ({url, alt}) => {
-  return `<li> <img src="${url}" alt="${alt}" class="gallery__image" </li>`;
-}
+const makeGalleryCard = ({url, alt}) => `<li> <img src="${url}" alt="${alt}" class="gallery__image" </li>`;
 const galleryEl = images.map(makeGalleryCard);
 galleryContainerEl.insertAdjacentHTML(`beforeend`, galleryEl);
