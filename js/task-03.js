@@ -13,3 +13,16 @@ const images = [
   },
 ];
 
+const galleryEl = document.querySelector(`.gallery`);
+const imagesEl = images.map(image => {
+  const imageEl = document.createElement(`img`);
+  imageEl.src = image.url;
+  imageEl.alt = image.alt;
+  const itemEl = document.createElement(`li`);
+  itemEl.append(imageEl);
+
+  return itemEl;
+})
+
+galleryEl.append(...imagesEl);
+console.log(galleryEl);
