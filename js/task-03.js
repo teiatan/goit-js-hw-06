@@ -13,16 +13,9 @@ const images = [
   },
 ];
 
-const galleryEl = document.querySelector(`.gallery`);
-const imagesEl = images.map(image => {
-  const imageEl = document.createElement(`img`);
-  imageEl.src = image.url;
-  imageEl.alt = image.alt;
-  const itemEl = document.createElement(`li`);
-  itemEl.append(imageEl);
-
-  return itemEl;
-})
-
-galleryEl.append(...imagesEl);
-console.log(galleryEl);
+const galleryContainerEl = document.querySelector(`.gallery`);
+const makeGalleryCard = ({url, alt}) => {
+  return `<li> <img src="${url}" alt="${alt}" class="gallery__image" </li>`;
+}
+const galleryEl = images.map(makeGalleryCard);
+galleryContainerEl.insertAdjacentHTML(`beforeend`, galleryEl);
