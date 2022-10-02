@@ -7,14 +7,17 @@ event.preventDefault();
 const formElements = event.currentTarget.elements;
 const mailEl = formElements.email.value;
 const passwordEl = formElements.password.value;
-const formData = {
-    mailEl,
-    passwordEl,
-}
 
-
-console.log(formData);
-
+ if (formElements.email.value === "" || formElements.password.value === "") {
+    alert("All form fields must be completed");
+ } else {
+    const formData = {
+        mailEl,
+        passwordEl,
+    };
+    formEl.reset();
+    console.log(formData);
+ };
 }
 
 
