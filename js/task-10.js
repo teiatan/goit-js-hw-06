@@ -23,8 +23,8 @@ for (let i = 0; i < amount; i += 1) {
   const boxEl = document.createElement(`div`);
   boxEl.setAttribute(`style`, `background-color:${getRandomHexColor()}; width:${30 + 10 * i}px; height:${30 + 10 * i}px;`);
   boxesEl.push(boxEl);
-  refs.boxesContainer.append(...boxesEl);
  }
+  refs.boxesContainer.append(...boxesEl);
 };
 
 function destroyBoxes(event) {
