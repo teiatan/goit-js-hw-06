@@ -1,4 +1,6 @@
-/* const ulCategoriesEl = document.querySelector(`#categories`);
+/* variant 1
+
+const ulCategoriesEl = document.querySelector(`#categories`);
 const allLiInCategoriesEl = ulCategoriesEl.querySelectorAll(`li.item`);
 console.log(`Number of categories: ${allLiInCategoriesEl.length}`);
 
@@ -9,6 +11,8 @@ for (let category of allLiInCategoriesEl) {
 }
  
  */
+
+/* variant 2
 
 const ulCategoriesEl = document.querySelector(`#categories`);
 
@@ -23,4 +27,16 @@ console.log(`
 
     Category: ${ulCategoriesEl.lastElementChild.firstElementChild.textContent}
     Elements: ${ulCategoriesEl.lastElementChild.lastElementChild.children.length}
-`);
+`); */
+
+/* variant 3 */
+
+const categories = document.querySelectorAll('.item');
+
+console.log('Number of categories:', categories.length);
+console.log('');
+categories.forEach((category) => {
+    console.log('Category:', category.firstElementChild.textContent);
+    console.log('Elements:', category.lastElementChild.children.length);
+    console.log('');
+})
